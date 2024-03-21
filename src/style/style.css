@@ -715,7 +715,11 @@ header {
   line-height: 1.8rem; }
 
 .guide-list img {
-  margin-top: 3.2rem; }
+  margin-top: 3.2rem;
+  width: 100%;
+  max-width: 59rem;
+  border-radius: 1.6rem;
+  box-shadow: var(--EffectShadow); }
 
 #feature {
   padding: 10rem;

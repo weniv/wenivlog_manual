@@ -148,6 +148,10 @@
 
   img {
     margin-top: 3.2rem;
+    width: 100%;
+    max-width: 59rem;
+    border-radius: 1.6rem;
+    box-shadow: var(--EffectShadow);
   }
 }
 
