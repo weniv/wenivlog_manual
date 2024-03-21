@@ -56,6 +56,9 @@ $colors: (
   --ColorCodeGreen: #{get-color(code-green)};
   --ColorCodeOrange: #{get-color(code-orange)};
   --EffectShadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  --WebWidth: 1190px;
+  --TabletWidth: 834px;
+  --MobileWidth: 390px;
 }
 
 :root[color-theme='dark'] {

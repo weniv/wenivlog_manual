@@ -1,0 +1,235 @@
+#intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url('../assets/banner.jpg') no-repeat center center / cover;
+  text-align: center;
+
+  .main-txt {
+    margin: 9.2rem auto 1.2rem;
+  }
+  .sub-txt {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.target-cont {
+  padding: 12rem;
+  display: flex;
+  gap: 14.8rem;
+
+  .sub-txt {
+    margin-bottom: 1.6rem;
+  }
+
+  .main-txt .light {
+    font-weight: 500;
+  }
+}
+
+.target-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.6rem;
+  margin-top: 1.2rem;
+
+  li {
+    background-color: var(--ColorPrimary);
+    color: var(--ColorBackground);
+    padding: 1.6rem 2.4rem;
+    border-radius: 2rem 0.2rem 2rem 2rem;
+    width: fit-content;
+  }
+}
+
+#guide {
+  background-color: var(--ColorActivation);
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--EffectShadow);
+
+  .main-txt {
+    margin-bottom: 1.6rem;
+  }
+  & > .sub-txt {
+    margin-bottom: 6rem;
+    font-weight: 600;
+    color: var(--ColorPrimary);
+  }
+}
+
+.guide-list {
+  list-style-type: none;
+  counter-reset: list-counter;
+  color: var(--ColorSurface);
+  display: flex;
+  flex-direction: column;
+  gap: 10.4rem;
+
+  li {
+    position: relative;
+
+    &:before {
+      content: '(' counter(list-counter) ')';
+      counter-increment: list-counter;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: 500;
+    }
+  }
+
+  li + li::after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    @include mask-image(var(--ColorPrimary), '../assets/icon/icon-down.svg');
+    position: absolute;
+    top: -3.2rem;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.guide-list {
+  .link-btn {
+    background-color: var(--ColorBackground);
+    color: var(--ColorSurface);
+    display: block;
+    width: fit-content;
+    margin: 2.4rem auto 0;
+  }
+  .guide-item {
+    display: inline;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
+  }
+
+  .sub-txt {
+    margin: 2rem auto;
+  }
+
+  .filename {
+    width: fit-content;
+    margin: auto;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.4rem;
+    color: var(--ColorBackground);
+    background-color: var(--ColorSurface);
+    border: 1px solid var(--ColorGrayLv2);
+
+    font-size: 1.4rem;
+    font-family: $font-code;
+    line-height: 1.8rem;
+  }
+
+  img {
+    margin-top: 3.2rem;
+  }
+}
+
+#feature {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sub-txt {
+    margin: 1.6rem auto 5.2rem;
+    color: var(--ColorPrimary);
+    font-weight: 600;
+  }
+}
+
+.feature-list {
+  display: flex;
+  padding: 2rem 2rem 5.2rem;
+  width: 100%;
+  max-width: var(--WebWidth);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 3.2rem;
+
+  &::-webkit-scrollbar {
+    height: 0.8rem;
+
+    &-thumb {
+      background-color: var(--ColorGrayLv4);
+      border-radius: 0.8rem;
+    }
+    &-track {
+      background-color: var(--ColorGrayLv2);
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+.feature-list li {
+  flex: 1;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  min-width: 49rem;
+  height: 52rem;
+
+  padding: 4.4rem 4rem;
+  position: relative;
+  overflow: hidden;
+
+  .tag {
+    font-weight: 600;
+    color: var(--ColorBackground);
+    background-color: var(--ColorGrayLv4);
+    padding: 0 0.4rem;
+  }
+
+  .description {
+    margin: 2rem 0 3.8rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  img {
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid var(--ColorGrayLv2);
+    background-color: var(--ColorActivation);
+  }
+}
+
+#link-cont {
+  padding: 8rem;
+  background-color: var(--ColorPrimary);
+  color: var(--ColorBackground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-txt {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+  }
+  .sub-txt {
+    margin: 1.6rem auto 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .link-btn {
+    background-color: var(--ColorBackground);
+    color: var(--ColorSurface);
+  }
+}
