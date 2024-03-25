@@ -732,15 +732,19 @@ header {
     margin: 1.6rem auto 5.2rem;
     color: var(--ColorPrimary);
     font-weight: 600; }
+  #feature img {
+    display: none; }
 
 .feature-list {
   display: flex;
   padding: 2rem 2rem 5.2rem;
   width: 100%;
   max-width: var(--WebWidth);
+  height: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  gap: 3.2rem; }
+  gap: 3.2rem;
+  justify-content: stretch; }
   .feature-list::-webkit-scrollbar {
     height: 0.8rem; }
     .feature-list::-webkit-scrollbar-thumb {
@@ -755,7 +759,7 @@ header {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   min-width: 49rem;
-  height: 52rem;
+  min-height: 100%;
   padding: 4.4rem 4rem;
   position: relative;
   overflow: hidden; }
