@@ -553,10 +553,13 @@ header {
 .header {
   max-width: 1190px;
   height: 7rem;
-  padding: 1.6rem;
+  padding: 1.6rem 3.2rem;
   margin: 0 auto;
   display: flex;
   align-items: center; }
+  @media (min-width: 1190px) {
+    .header {
+      padding: 1.6rem; } }
   .header h1 {
     flex: none;
     margin-right: auto;
@@ -573,7 +576,7 @@ header {
   align-items: center;
   justify-content: space-around;
   width: 32rem; }
-  @media screen and (max-width: 390px) {
+  @media (max-width: 768px) {
     .content-nav .nav-list {
       display: none; } }
 
@@ -599,6 +602,70 @@ header {
   color: var(--ColorPrimary); }
   .nav-list .active::before {
     transform: translate(-50%, 50%); }
+
+.lang-btn {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-left: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .lang-btn::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--ColorGrayLv3);
+    -webkit-mask-image: url("../assets/icon/icon-world.svg");
+    -webkit-mask-size: 2.8rem;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-image: url("../assets/icon/icon-world.svg");
+    mask-size: 2.8rem;
+    mask-repeat: no-repeat;
+    mask-position: center center; }
+  .lang-btn:hover {
+    background-color: var(--ColorActivation); }
+  .lang-btn.active {
+    background-color: var(--ColorActivation); }
+    .lang-btn.active::before {
+      background: var(--ColorPrimary);
+      -webkit-mask-image: url("../assets/icon/icon-world.svg");
+      -webkit-mask-size: 2.8rem;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      mask-image: url("../assets/icon/icon-world.svg");
+      mask-size: 2.8rem;
+      mask-repeat: no-repeat;
+      mask-position: center center; }
+  @media screen and (max-width: 390px) {
+    .lang-btn {
+      margin-left: 1.2rem; } }
+
+.lang-cont {
+  position: relative; }
+
+.lang-modal {
+  position: absolute;
+  transform: translate(0, 10%);
+  width: 8rem;
+  border: 1px solid var(--ColorGrayLv2);
+  border-radius: 1rem;
+  padding: 0.8rem 0;
+  background-color: var(--ColorBackground);
+  box-shadow: var(--EffectShadow);
+  display: none; }
+  .lang-modal.active {
+    display: block; }
+  .lang-modal li {
+    padding: 1rem;
+    text-align: center;
+    color: var(--ColorGrayLv3);
+    cursor: pointer; }
+    .lang-modal li.active {
+      color: var(--ColorPrimary); }
+    .lang-modal li:hover {
+      background-color: var(--ColorActivation); }
 
 #intro,
 #guide,
