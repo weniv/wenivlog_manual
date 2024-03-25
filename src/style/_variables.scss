@@ -1,6 +1,10 @@
 $font-basic: 'Pretendard';
 $font-code: 'Source Code Pro';
 
+$break-web: 1190px;
+$break-tablet: 834px;
+$break-mobile: 390px;
+
 $colors: (
   light: (
     primary: #2f6ff2,
@@ -56,9 +60,6 @@ $colors: (
   --ColorCodeGreen: #{get-color(code-green)};
   --ColorCodeOrange: #{get-color(code-orange)};
   --EffectShadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
-  --WebWidth: 1190px;
-  --TabletWidth: 834px;
-  --MobileWidth: 390px;
 }
 
 :root[color-theme='dark'] {

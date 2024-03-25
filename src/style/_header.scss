@@ -5,8 +5,9 @@ header {
   background-color: var(--ColorBackground);
   z-index: 100;
 }
+
 .header {
-  max-width: var(--WebWidth);
+  max-width: $break-web;
 
   height: 7rem;
   padding: 1.6rem;
@@ -16,8 +17,14 @@ header {
   align-items: center;
 
   h1 {
+    flex: none;
+
     margin-right: auto;
     display: flex;
+    width: 17.7rem;
+    @include mobile {
+      width: 14rem;
+    }
   }
   .link-btn {
     margin-left: auto;
@@ -27,15 +34,22 @@ header {
 .content-nav .nav-list {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  justify-content: space-around;
+  width: 32rem;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .nav-list li {
   position: relative;
   transition: all 0.3s;
 
-  padding: 0 1.4rem;
+  padding: 0 1.3rem;
   text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
 
   &::before {
     transition: all 0.3s;
