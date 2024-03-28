@@ -171,5 +171,6 @@ function initLangSetting() {
       el.classList.add('active');
     }
   });
+  document.querySelector('body').style.opacity = 1;
 }
-window.addEventListener('DOMContentLoaded', initLangSetting);
+window.addEventListener('load', initLangSetting);
