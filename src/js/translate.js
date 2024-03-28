@@ -1,6 +1,7 @@
 // utils.js
 const translations = {
   ko: {
+    manual: '매뉴얼',
     title: '위니블로그',
     intro: 'wenivlog 소개',
     guide: '사용 방법',
@@ -56,6 +57,7 @@ const translations = {
     'address-value': '제주 제주시 첨단로 330 세미양빌딩 A동 1층 106호',
   },
   en: {
+    manual: 'Manual',
     title: 'wenivlog',
     intro: 'About wenivlog',
     guide: 'How to Use',
@@ -120,7 +122,11 @@ function translate(key, lang) {
 }
 
 function translatePage(lang) {
-  console.log('change language to ', lang);
+  document.querySelector('html').setAttribute('lang', lang);
+  document.querySelector('title').innerHTML = `${translate(
+    'manual',
+    lang,
+  )} | wenivlog`;
   document.querySelectorAll('[data-lang]').forEach((el) => {
     const key = el.getAttribute('data-lang');
     el.innerHTML = translate(key, lang);
@@ -157,6 +163,7 @@ $langLists.forEach((el) => {
 function initLangSetting() {
   const lang = localStorage.getItem('lang') || 'ko';
   localStorage.setItem('lang', lang);
+
   translatePage(lang);
 
   $langLists.forEach((el) => {
