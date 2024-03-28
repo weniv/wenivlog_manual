@@ -9,6 +9,7 @@
     <!-- JavaScript -->
     <script src="./src/js/utils.js" defer></script>
     <script src="./src/js/index.js" defer></script>
+    <script src="./src/js/translate.js" defer></script>
   </head>
   <body>
     <div id="google_translate_element"></div>
@@ -17,45 +18,53 @@
       <div class="header">
         <h1>
           <a href="#">
-            <img class="logo-img" src="./src/assets/wenivlog-logo.svg" alt="위니브 블로그"
-          /></a>
+            <img class="logo-img" src="./src/assets/wenivlog-logo.svg" alt="" />
+            <span class="sr-only" data-lang="title">위니블로그</span>
+          </a>
         </h1>
         <nav class="content-nav">
           <ul class="nav-list">
-            <li class="active"><a href="#intro">wenivlog 소개</a></li>
-            <li><a href="#guide">사용 방법</a></li>
-            <li><a href="#feature">부가기능</a></li>
+            <li class="active">
+              <a href="#intro" data-lang="intro">wenivlog 소개</a>
+            </li>
+            <li><a href="#guide" data-lang="guide">사용 방법</a></li>
+            <li><a href="#feature" data-lang="feature">부가기능</a></li>
           </ul>
         </nav>
         <a
           href="https://github.com/weniv/weniv_blog"
           target="_blank"
           class="link-btn"
+          data-lang="create-blog"
           >블로그 만들기</a
         >
         <div class="lang-cont">
-        <button class="lang-btn">
-          <span class="sr-only">언어 선택</span>
-        </button>
-        <div class="lang-modal">
-          <ul class="lang-list">
-            <li  data-lang="KR">KR<span class="sr-only">한국어로 변경</span></li>
-            <li data-lang="EN">EN<span class="sr-only">Change to English</span></li>
-          </ul>
+          <button class="lang-btn">
+            <span class="sr-only" data-lang="select-language">언어 선택</span>
+          </button>
+          <div class="lang-modal">
+            <ul class="lang-list">
+              <li data-pagelang="ko">
+                KR<span class="sr-only">한국어로 변경</span>
+              </li>
+              <li data-pagelang="en">
+                EN<span class="sr-only">Change to English</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
       </div>
     </header>
     <main>
       <section id="intro">
-        <h2 class="sr-only">wenivlog 소개</h2>
+        <h2 class="sr-only" data-lang="intro">wenivlog 소개</h2>
         <div class="banner">
-          <p class="main-txt">
-            손쉽게 만드는 나만의  <span class="newline"> GitHub Blog</span>
+          <p class="main-txt" data-lang="banner-main-txt">
+            손쉽게 만드는 나만의 <span class="newline"> GitHub Blog</span>
           </p>
-          <p class="sub-txt">
+          <p class="sub-txt" data-lang="banner-sub-txt">
             GitHub Pages를 이용하여
-            <span class="newline"></span>
+            <span class="newline">
               나만의 정적 블로그를 쉽게 구현해 보세요!</span
             >
           </p>
@@ -63,61 +72,74 @@
             href="https://github.com/weniv/weniv_blog"
             target="_blank"
             class="link-btn"
+            data-lang="create-blog"
             >블로그 만들기</a
           >
         </div>
         <div class="target-cont">
           <div class="txt-cont">
-            <p class="sub-txt">
+            <p class="sub-txt" data-lang="target-sub-txt">
               GitHub Blog 만들기에 어려움이 있으셨나요?<br />wenivlog를 사용해
               보세요!
             </p>
-            <p class="main-txt">
+            <p class="main-txt" data-lang="target-main-txt">
               <span class="light"> GitHub Pages를 이용하여 <br /></span>
               나만의 정적 블로그를 <br />
               쉽게 구현할 수 있어요
             </p>
           </div>
           <ul class="target-list">
-            <li>나만의 개발 블로그를 만들어보고 싶었던 분</li>
-            <li>Jekyll 을 이용해 블로그를 만드는데 어려움을 느끼셨던 분</li>
-            <li>블로그 글도 쓰면서 GitHub 잔디도 심고 싶으신 분</li>
-            <li>
-              매일 TIL<span class="annotation">(*Today I Learned)</span>을
-              작성하고 싶으신 분
+            <li data-lang="target-list-1">
+              나만의 개발 블로그를 만들어보고 싶었던 분
+            </li>
+            <li data-lang="target-list-2">
+              Jekyll 을 이용해 블로그를 만드는데 어려움을 느끼셨던 분
+            </li>
+            <li data-lang="target-list-3">
+              블로그 글도 쓰면서 GitHub 잔디도 심고 싶으신 분
+            </li>
+            <li data-lang="target-list-4">
+              매일 TIL (*Today I Learned)을 작성하고 싶으신 분
             </li>
           </ul>
         </div>
       </section>
       <section id="guide">
-        <h2 class="sr-only">사용 방법</h2>
-        <p class="main-txt">사용 방법을 알려드릴게요</p>
-        <p class="sub-txt">“차근차근 따라하면 나만의 GitHub Blog 탄생!”</p>
+        <h2 class="sr-only" data-lang="guide">사용 방법</h2>
+        <p class="main-txt" data-lang="guide-main-txt">
+          사용 방법을 알려드릴게요
+        </p>
+        <p class="sub-txt" data-lang="guide-sub-txt">
+          “차근차근 따라하면 나만의 GitHub Blog 탄생!”
+        </p>
         <ol class="guide-list">
           <li>
-            <div class="guide-item">제공된 레포지토리를 fork 합니다.</div>
+            <div class="guide-item" data-lang="guide-item-1">
+              제공된 레포지토리를 fork 합니다.
+            </div>
             <a
               href="https://github.com/weniv/weniv_blog"
               target="_blank"
               class="link-btn"
+              data-lang="guide-link-btn"
               >링크 바로가기</a
             >
             <img src="./src/assets/guide-1.jpg" alt="" />
           </li>
           <li>
-            <div class="guide-item">
+            <div class="guide-item" data-lang="guide-item-2">
               내 레포지토리의 github pages를 활성화합니다.
             </div>
             <img src="./src/assets/guide-2.jpg" alt="" />
           </li>
           <li>
-            <div class="guide-item">
+            <div class="guide-item" data-lang="guide-item-3">
               레포지토리에 마크다운으로 블로그 글을 작성합니다.
             </div>
-            <p class="sub-txt">
+            <p class="sub-txt" data-lang="guide-item-3-sub-txt">
               blog 폴더에 파일을 추가하며파일 이름은 다음 양식으로 작성합니다.
             </p>
-            <p class="filename">
+            <p class="filename" data-lang="guide-item-3-filename">
               [작성일]_[제목]_[카고테리]_[썸네일 이미지 링크]_[설명].md
             </p>
             <img src="./src/assets/guide-3.jpg" alt="" />
@@ -125,36 +147,40 @@
         </ol>
       </section>
       <section id="feature">
-        <h2 class="sr-only">기능 소개</h2>
-        <p class="main-txt">이런 기능도 제공해요</p>
-        <p class="sub-txt">개성 넘치는 나만의 블로그를 만들어보세요!</p>
+        <h2 class="sr-only" data-lang="feature">기능 소개</h2>
+        <p class="main-txt" data-lang="feature-main-txt">
+          이런 기능도 제공해요
+        </p>
+        <p class="sub-txt" data-lang="feature-sub-txt">
+          개성 넘치는 나만의 블로그를 만들어보세요!
+        </p>
         <ul class="feature-list">
           <li>
-            <span class="tag">#커스터마이징</span>
-            <p class="description">
+            <span class="tag" data-lang="feature-tag-1">#커스터마이징</span>
+            <p class="description" data-lang="feature-description-1">
               config.js를 이용하여 블로그의 제목과 사용자 정보를 변경할 수
               있어요.
             </p>
             <img src="" alt="" class="feature-img" />
           </li>
           <li>
-            <span class="tag">#커스터마이징</span>
-            <p class="description">
+            <span class="tag" data-lang="feature-tag-1">#커스터마이징</span>
+            <p class="description" data-lang="feature-description-2">
               Tailwind CSS를 이용하여 globalStyle.js를 수정하여 전반적인
               블로그의 스타일을 수정할 수 있어요.
             </p>
             <img src="" alt="" class="feature-img" />
           </li>
           <li>
-            <span class="tag">#에셋 제공</span>
-            <p class="description">
+            <span class="tag" data-lang="feature-tag-2">#에셋 제공</span>
+            <p class="description" data-lang="feature-description-3">
               위니브 프렌즈의 얼굴을 담은 프로필 이미지를 제공해요.
             </p>
             <img src="" alt="" class="feature-img" />
           </li>
           <li>
-            <span class="tag">#에셋 제공</span>
-            <p class="description">
+            <span class="tag" data-lang="feature-tag-2">#에셋 제공</span>
+            <p class="description" data-lang="feature-description-4">
               기본 썸네일 이미지를 제공해요. 글 파일을 작성할 때 썸네일 이미지
               링크를 비워두면 랜덤으로 이미지가 적용돼요.
             </p>
@@ -163,9 +189,13 @@
         </ul>
       </section>
       <section id="link-cont">
-        <p class="main-txt">지금 바로 나만의 GitHub Blog를 만들어 보세요</p>
-        <p class="sub-txt">wenivlog와 함께라면 어렵지 않아요 :&#41;</p>
-        <a href="" class="link-btn">블로그 만들기</a>
+        <p class="main-txt" data-lang="link-cont-main-txt">
+          지금 바로 나만의 GitHub Blog를 만들어 보세요
+        </p>
+        <p class="sub-txt" data-lang="link-cont-sub-txt">
+          wenivlog와 함께라면 어렵지 않아요 :&#41;
+        </p>
+        <a href="" class="link-btn" data-lang="create-blog">블로그 만들기</a>
       </section>
     </main>
     <footer class="footer">
@@ -174,31 +204,41 @@
           <h2>
             <a href="/">
               <img src="./src/assets/wenivlog-logo-gray.svg" alt="" />
-              <span class="sr-only">Weniv SQL</span>
+              <span class="sr-only">Wenivlog</span>
             </a>
           </h2>
           <p class="copyright">Copyright © 2024 WENIV All Rights Reserved</p>
         </section>
         <section class="weniv-info">
-          <button type="button" class="info-toggle-btn">
+          <button
+            type="button"
+            class="info-toggle-btn"
+            data-lang="footer-info-toggle-btn"
+          >
             (주)위니브 사업자 정보
           </button>
           <dl>
             <div class="sort">
-              <dt class="sr-only">회사명</dt>
-              <dd class="data-line">(주)위니브</dd>
-              <dt>대표&#58;</dt>
-              <dd class="data-line data-ceo">이호준</dd>
+              <dt class="sr-only" data-lang="company-name">회사명</dt>
+              <dd class="data-line" data-lang="company-name-value">
+                (주)위니브
+              </dd>
+              <dt data-lang="ceo">대표&#58;</dt>
+              <dd class="data-line" data-lang="ceo-value">이호준</dd>
             </div>
             <div class="sort">
-              <dt>사업자 번호&#58;</dt>
+              <dt data-lang="business-license">사업자 번호&#58;</dt>
               <dd class="data-line">546-86-01737</dd>
-              <dt class="sr-only">업종</dt>
-              <dd class="data-line data-involved">정보통신업</dd>
+              <dt class="sr-only" data-lang="industry">업종</dt>
+              <dd class="data-line data-involved" data-lang="industry-value">
+                정보통신업
+              </dd>
             </div>
             <div class="sort">
-              <dt>주소&#58;</dt>
-              <dd>제주 제주시 첨단로 330 세미양빌딩 A동 1층 106호</dd>
+              <dt data-lang="address">주소&#58;</dt>
+              <dd data-lang="address-value">
+                제주 제주시 첨단로 330 세미양빌딩 A동 1층 106호
+              </dd>
             </div>
           </dl>
         </section>
@@ -247,19 +287,5 @@
         </ul>
       </div>
     </footer>
-    <!-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: 'ko',
-            includedLanguages: 'en,ko',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false,
-          },
-          'google_translate_element',
-        );
-      }
-    </script> -->
   </body>
 </html>
