@@ -172,4 +172,4 @@ function initLangSetting() {
     }
   });
 }
-initLangSetting();
+window.addEventListener('DOMContentLoaded', initLangSetting);
