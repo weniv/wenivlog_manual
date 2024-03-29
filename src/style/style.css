@@ -856,6 +856,9 @@ header {
   align-items: center;
   position: relative;
   z-index: 0; }
+  #feature .main-txt {
+    text-align: center;
+    margin: auto; }
   #feature .sub-txt {
     margin: 1.6rem auto 5.2rem;
     color: var(--ColorPrimary);

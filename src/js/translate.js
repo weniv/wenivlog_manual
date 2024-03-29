@@ -71,7 +71,7 @@ const translations = {
     'target-sub-txt':
       'Did you have difficulty creating a GitHub Blog?<br />Try using wenivlog!',
     'target-main-txt':
-      "<span class='light'>You can easily implement your own static blog <br /></span>using GitHub Pages",
+      "<span class='light'>using GitHub Pages <br /></span> Make your own static blog",
     'target-list-1': 'Those who wanted to create their own development blog',
     'target-list-2': 'Those who felt difficult to create a blog using Jekyll',
     'target-list-3':
@@ -140,7 +140,6 @@ const $langLists = document.querySelectorAll('.lang-list li');
 
 window.addEventListener('click', (e) => {
   if ($langBtn.contains(e.target)) {
-    console.log('click');
     $langBtn.classList.toggle('active');
     $langModal.classList.toggle('active');
   } else if (!$langModal.contains(e.target)) {
