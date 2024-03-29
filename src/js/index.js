@@ -1,33 +1,35 @@
-// Nav Scroll
-const $navItems = document.querySelectorAll('.nav-list li');
-$navItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    item.classList.add('active');
-    $navItems.forEach((navItem) => {
-      if (navItem !== item) {
-        navItem.classList.remove('active');
-      }
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll(`.content-nav .nav-list li a`);
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      console.log(link);
+      navLinks.forEach((link) => link.closest('li').classList.remove('active'));
+      this.closest('li').classList.add('active');
     });
   });
 });
 
-const intersectionObserver = new IntersectionObserver(
-  (entries, observer) => {
-    const activeId = entries[0].target.id;
-    $navItems.forEach((item) => {
-      if (item.firstElementChild.getAttribute('href') === `#${activeId}`) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    });
-  },
-  { threshold: 0.6 },
-);
-const $intro = document.getElementById('intro');
-const $guide = document.getElementById('guide');
-const $feature = document.getElementById('feature');
+window.addEventListener('scroll', () => {
+  const topHeight = window.scrollY + 70;
+  const sections = [
+    document.getElementById('intro'),
+    document.getElementById('guide'),
+    document.getElementById('feature'),
+  ];
 
-intersectionObserver.observe($intro);
-intersectionObserver.observe($guide);
-intersectionObserver.observe($feature);
+  sections.forEach((section) => {
+    if (
+      section.offsetTop <= topHeight &&
+      section.offsetTop + section.offsetHeight > topHeight
+    ) {
+      document
+        .querySelector('.content-nav .nav-list li.active')
+        .classList.remove('active');
+      document
+        .querySelector(`.content-nav .nav-list li a[href="#${section.id}"]`)
+        .closest('li')
+        .classList.add('active');
+    }
+  });
+});
