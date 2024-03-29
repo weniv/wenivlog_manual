@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
-      console.log(link);
       navLinks.forEach((link) => link.closest('li').classList.remove('active'));
       this.closest('li').classList.add('active');
     });
@@ -20,8 +19,8 @@ window.addEventListener('scroll', () => {
 
   sections.forEach((section) => {
     if (
-      section.offsetTop <= topHeight &&
-      section.offsetTop + section.offsetHeight > topHeight
+      section.offsetTop <= topHeight + 2 &&
+      section.offsetTop + section.offsetHeight > topHeight + 2
     ) {
       document
         .querySelector('.content-nav .nav-list li.active')
