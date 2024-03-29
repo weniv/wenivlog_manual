@@ -3,7 +3,7 @@ const translations = {
   ko: {
     manual: '매뉴얼',
     title: '위니블로그',
-    intro: 'wenivlog 소개',
+    intro: 'Wenivlog 소개',
     guide: '사용 방법',
     feature: '부가기능',
     'select-language': '언어 선택',
@@ -58,8 +58,8 @@ const translations = {
   },
   en: {
     manual: 'Manual',
-    title: 'wenivlog',
-    intro: 'About wenivlog',
+    title: 'WENIVLOG',
+    intro: 'About Wenivlog',
     guide: 'How to Use',
     feature: 'Features',
     'select-language': 'Select Language',
@@ -126,7 +126,7 @@ function translatePage(lang) {
   document.querySelector('title').innerHTML = `${translate(
     'manual',
     lang,
-  )} | wenivlog`;
+  )} | WENIVLOG`;
   document.querySelectorAll('[data-lang]').forEach((el) => {
     const key = el.getAttribute('data-lang');
     el.innerHTML = translate(key, lang);
