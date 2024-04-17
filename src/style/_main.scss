@@ -355,3 +355,31 @@
     }
   }
 }
+
+.sponsor-cont {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .sub-txt {
+    margin: 1.6rem auto 5.2rem;
+  }
+  .sponsor-card {
+    display: block;
+  }
+  .sponsor-btn {
+    display: none;
+  }
+
+  @include mobile {
+    padding: 5.2rem 2.4rem;
+    .sponsor-card {
+      display: none;
+    }
+    .sponsor-btn {
+      display: block;
+    }
+  }
+}
