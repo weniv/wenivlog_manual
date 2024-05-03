@@ -126,7 +126,7 @@ function translatePage(lang) {
   document.querySelector('title').innerHTML = `${translate(
     'manual',
     lang,
-  )} | WENIVLOG`;
+  )} | ${translate('title', lang)}`;
   document.querySelectorAll('[data-lang]').forEach((el) => {
     const key = el.getAttribute('data-lang');
     el.innerHTML = translate(key, lang);
