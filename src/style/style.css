@@ -792,6 +792,7 @@ header {
     color: var(--ColorPrimary); }
   .lecture-cont .thumb-cont {
     width: 80%;
+    max-width: 59rem;
     margin-top: 2rem;
     position: relative; }
     .lecture-cont .thumb-cont::before {
