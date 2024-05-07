@@ -780,6 +780,46 @@ header {
     #guide {
       padding: 5.2rem 2.4rem; } }
 
+.lecture-cont {
+  width: 100%;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem; }
+  .lecture-cont .sub-txt {
+    font-weight: 600;
+    color: var(--ColorPrimary); }
+  .lecture-cont .thumb-cont {
+    width: 80%;
+    margin-top: 2rem;
+    position: relative; }
+    .lecture-cont .thumb-cont::before {
+      z-index: -1;
+      content: '';
+      width: 95%;
+      height: 50%;
+      background-color: var(--ColorGrayLv3);
+      border-radius: 1rem;
+      position: absolute;
+      left: 50%;
+      top: -0.8rem;
+      transform: translateX(-50%); }
+    .lecture-cont .thumb-cont::after {
+      position: absolute;
+      bottom: 2.4rem;
+      right: 2.4rem;
+      content: '동영상 8개';
+      color: var(--ColorBackground);
+      padding: 0.6rem;
+      padding-left: 4rem;
+      border-radius: 0.4rem;
+      background: url("../assets/icon/icon-list.svg") no-repeat left 0.6rem center/2.4rem var(--ColorGrayLv4);
+      box-shadow: var(--EffectShadow); }
+  .lecture-cont .thumb-img {
+    border-radius: 1rem;
+    border: 1px solid var(--ColorBackground); }
+
 .guide-list {
   list-style-type: none;
   counter-reset: list-counter;
