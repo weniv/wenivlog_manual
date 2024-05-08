@@ -818,7 +818,7 @@ header {
       background: url("../assets/icon/icon-list.svg") no-repeat left 0.6rem center/2.4rem var(--ColorGrayLv4);
       box-shadow: var(--EffectShadow); }
   .lecture-cont .thumb-img {
-    border-radius: 1rem;
+    border-radius: 1.6rem;
     border: 1px solid var(--ColorBackground); }
 
 .guide-list {
@@ -1001,25 +1001,79 @@ header {
         font-size: 1.8rem;
         line-height: 2.4rem; } }
 
+.sponsor-btn {
+  padding: 1.1rem 2rem 1.1rem 1.6rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border: 1px solid var(--ColorGrayLv2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  position: relative; }
+  .sponsor-btn::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background: var(--ColorPrimary);
+    -webkit-mask-image: url("../assets/icon/icon-heart.svg");
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-image: url("../assets/icon/icon-heart.svg");
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center center; }
+  .sponsor-btn:hover {
+    background-color: var(--ColorGrayLv1); }
+
+@media screen and (max-width: 390px) {
+  header .sponsor-btn {
+    display: none; } }
+
 .sponsor-cont {
   padding: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .sponsor-cont .sub-txt {
-    margin: 1.6rem auto 5.2rem; }
-  .sponsor-cont .sponsor-card {
-    display: block; }
-  .sponsor-cont .sponsor-btn {
-    display: none; }
+  @media screen and (max-width: 834px) {
+    .sponsor-cont {
+      padding: 8rem 4rem; } }
   @media screen and (max-width: 390px) {
     .sponsor-cont {
-      padding: 5.2rem 2.4rem; }
-      .sponsor-cont .sponsor-card {
-        display: none; }
-      .sponsor-cont .sponsor-btn {
-        display: block; } }
+      padding: 2.4rem; } }
+  .sponsor-cont .sub-txt {
+    margin: 1.6rem auto 6rem; }
+    @media screen and (max-width: 390px) {
+      .sponsor-cont .sub-txt {
+        margin: 1.6rem auto 3.2rem; } }
+
+.sponsor-card {
+  margin: 3.2rem 0;
+  padding: 2.4rem;
+  background-color: var(--ColorGrayLv1);
+  border-radius: 1.6rem;
+  max-width: 59rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center; }
+  .sponsor-card .sponsor-profile {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%; }
+  .sponsor-card .text-cont .intro {
+    font-weight: 600; }
+  .sponsor-card .text-cont .corp {
+    margin: 1.6rem 0 0.8rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--ColorGrayLv4); }
+  .sponsor-card .text-cont .descript {
+    font-size: 1.5rem;
+    color: var(--ColorGrayLv4); }
 
 .footer {
   padding: 6rem 0;
