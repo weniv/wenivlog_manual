@@ -59,8 +59,10 @@
   width: 100%;
   max-width: $break-web;
   display: flex;
-  justify-content: center;
-  gap: 14.8rem;
+  justify-content: space-between;
+  padding: 12rem 2rem;
+
+  // gap: 14.8rem;
   .sub-txt {
     margin-bottom: 1.6rem;
   }

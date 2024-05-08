@@ -32,3 +32,5 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// 스폰서 이동

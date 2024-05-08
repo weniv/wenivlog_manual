@@ -721,8 +721,8 @@ header {
   width: 100%;
   max-width: 1190px;
   display: flex;
-  justify-content: center;
-  gap: 14.8rem; }
+  justify-content: space-between;
+  padding: 12rem 2rem; }
   .target-cont .sub-txt {
     margin-bottom: 1.6rem; }
   .target-cont .main-txt .light {
