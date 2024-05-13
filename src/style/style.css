@@ -670,8 +670,8 @@ header {
     .lang-modal li:hover {
       background-color: var(--ColorActivation); }
 
-@media screen and (max-width: 390px) {
-  .sponsor-btn {
+@media screen and (max-width: 834px) {
+  header .sponsor-btn {
     display: none; } }
 
 #intro,
@@ -784,7 +784,7 @@ header {
 
 .lecture-cont {
   width: 100%;
-  margin: 6rem 0;
+  margin: 6rem 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -900,7 +900,7 @@ header {
   box-shadow: var(--EffectShadow); }
 
 #feature {
-  padding: 10rem;
+  margin: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -917,10 +917,10 @@ header {
     display: none; }
   @media screen and (max-width: 834px) {
     #feature {
-      padding: 8rem 4rem; } }
+      margin: 8rem 4rem; } }
   @media screen and (max-width: 390px) {
     #feature {
-      padding: 5.2rem 2.4rem; }
+      margin: 5.2rem 2.4rem; }
       #feature .sub-txt {
         margin: 1.6rem auto 4rem; } }
 
@@ -1030,22 +1030,18 @@ header {
   .sponsor-btn:hover {
     background-color: var(--ColorGrayLv1); }
 
-@media screen and (max-width: 390px) {
-  header .sponsor-btn {
-    display: none; } }
-
 .sponsor-cont {
-  padding: 10rem;
+  margin: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
   @media screen and (max-width: 834px) {
     .sponsor-cont {
-      padding: 8rem 4rem; } }
+      margin: 8rem 4rem; } }
   @media screen and (max-width: 390px) {
     .sponsor-cont {
-      padding: 2.4rem; } }
+      margin: 2.4rem; } }
   .sponsor-cont .sub-txt {
     margin: 1.6rem auto 6rem; }
     @media screen and (max-width: 390px) {

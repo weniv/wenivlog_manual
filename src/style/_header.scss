@@ -155,13 +155,10 @@ header {
       background-color: var(--ColorActivation);
     }
   }
-
-  @include tablet {
-  }
 }
 
-.sponsor-btn {
-  @include mobile {
+header .sponsor-btn {
+  @include tablet {
     display: none;
   }
 }

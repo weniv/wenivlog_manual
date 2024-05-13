@@ -142,7 +142,7 @@
 
 .lecture-cont {
   width: 100%;
-  margin: 6rem 0;
+  margin: 6rem 0 0;
 
   display: flex;
   flex-direction: column;
@@ -278,7 +278,7 @@
 }
 
 #feature {
-  padding: 10rem;
+  margin: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,10 +301,10 @@
   }
 
   @include tablet {
-    padding: 8rem 4rem;
+    margin: 8rem 4rem;
   }
   @include mobile {
-    padding: 5.2rem 2.4rem;
+    margin: 5.2rem 2.4rem;
 
     .sub-txt {
       margin: 1.6rem auto 4rem;
@@ -439,24 +439,19 @@
     background-color: var(--ColorGrayLv1);
   }
 }
-header .sponsor-btn {
-  @include mobile {
-    display: none;
-  }
-}
 
 .sponsor-cont {
-  padding: 10rem;
+  margin: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   @include tablet {
-    padding: 8rem 4rem;
+    margin: 8rem 4rem;
   }
   @include mobile {
-    padding: 2.4rem;
+    margin: 2.4rem;
   }
 
   .sub-txt {
