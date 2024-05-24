@@ -59,6 +59,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./src/style/style.css" />
     <!-- JavaScript -->
+    <script src="./src/js/analytics.js" defer></script>
     <script src="./src/js/utils.js" defer></script>
     <script src="./src/js/index.js" defer></script>
     <script src="./src/js/translate.js" defer></script>
@@ -87,12 +88,13 @@
             <li><a href="#feature" data-lang="feature">부가기능</a></li>
           </ul>
         </nav>
-        <a href="https://github.com/sponsors/weniv?o=esb" target="_blank" class="sponsor-btn">Sponsor</button>
+        <a href="https://github.com/sponsors/weniv?o=esb" target="_blank" class="sponsor-btn" data-type="GitHub 스폰서">Sponsor</button>
         <a
           href="https://github.com/weniv/weniv_blog"
           target="_blank"
           class="link-btn"
           data-lang="create-blog"
+          data-type="블로그 만들기"
           >블로그 만들기</a
         >
         <div class="lang-cont">
@@ -220,6 +222,7 @@
             target="_blank"
             class="link-btn"
             data-lang="lecture-btn"
+            data-type="강의 바로가기"
             >강의 바로가기</a
         </div>
       </section>
@@ -281,7 +284,7 @@
             <p class="descript" data-lang="sponsor-descript">제주에 위치한 ICT 교육 콘텐츠 기업으로 청년들을 위한 다양한 교육 사업을 진행하고 있습니다.</p>
           </div>
         </article>
-        <a href="https://github.com/sponsors/weniv?o=esb" target="_blank" class="sponsor-btn">Sponsor</a>
+        <a href="https://github.com/sponsors/weniv?o=esb" target="_blank" class="sponsor-btn" data-type="GitHub 스폰서">Sponsor</a>
       </secition>
       <section id="link-cont">
         <p class="main-txt" data-lang="link-cont-main-txt">
@@ -290,7 +293,7 @@
         <p class="sub-txt" data-lang="link-cont-sub-txt">
           wenivlog와 함께라면 어렵지 않아요 :&#41;
         </p>
-        <a href="" class="link-btn" data-lang="create-blog">블로그 만들기</a>
+        <a href="" class="link-btn" data-lang="create-blog" data-type="블로그 만들기">블로그 만들기</a>
       </section>
     </main>
     <footer class="footer">
@@ -339,7 +342,7 @@
         </section>
         <ul class="link-list">
           <li>
-            <a href="https://paullab.co.kr/" class="btn-link" target="_blank">
+            <a href="https://paullab.co.kr/" class="btn-link" target="_blank" data-type="Footer: 바울랩">
               <span class="sr-only">Home</span>
             </a>
           </li>
@@ -348,6 +351,7 @@
               href="https://www.inflearn.com/users/@jejucoding"
               class="btn-link link-inflearn"
               target="_blank"
+              data-type="Footer: 인프런"
             >
               <span class="sr-only">Inflearn</span>
             </a>
@@ -357,6 +361,7 @@
               href="https://www.youtube.com/@jejucodingcamp"
               class="btn-link link-youtube"
               target="_blank"
+              data-type="Footer: 유튜브"
             >
               <span class="sr-only">Youtube</span>
             </a>
@@ -366,6 +371,7 @@
               href="https://blog.naver.com/paul-lab"
               class="btn-link link-naver"
               target="_blank"
+              data-type="Footer: 네이버 블로그"
             >
               <span class="sr-only">Naver blog</span>
             </a>
@@ -375,6 +381,7 @@
               href="https://www.instagram.com/weniv_official/"
               class="btn-link link-insta"
               target="_blank"
+              data-type="Footer: 인스타그램"
             >
               <span class="sr-only">Instagram</span>
             </a>
